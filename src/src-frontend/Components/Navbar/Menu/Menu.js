@@ -5,8 +5,6 @@ import Recipe from "../../Navbar/Recipe/Recipe.js";
 import { useIsMount } from "../../Searchbar/useIsMount.js";
 // import { Link } from "react-router-dom";
 
-
-
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [query2, setQuery] = useState("");
@@ -47,7 +45,12 @@ export default function Menu() {
       {menuOpen && (
         <>
           <ul className="menu-list">
-            <li className="filter-box" id = 'button' value="Seafood" onClick={getSearch}>
+            <li
+              className="filter-box"
+              id="button"
+              value="Seafood"
+              onClick={getSearch}
+            >
               Seafood
             </li>
             <li className="filter-box" value="Beef" onClick={getSearch}>
@@ -86,7 +89,6 @@ export default function Menu() {
           </ul>
         </>
       )}
-      
     </>
   );
 }
