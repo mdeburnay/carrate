@@ -2,10 +2,8 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import "./NotFound.css";
 import carrate from "../../Images/sad-carrate.jpg";
-
 export default function NotFound() {
   const history = useHistory();
-
   function goHome() {
     history.push("/");
   }

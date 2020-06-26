@@ -28,8 +28,6 @@ const APP = () => {
     }
   }, [query]);
 
- 
- 
   /*
   const getRecipes = async () => {
 <<<<<<< HEAD
@@ -57,14 +55,13 @@ const APP = () => {
   };
 */
 
-const getRecipes = async () => {
-  const response = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
-  );
-  const data = await response.json();
-  setRecipes(data.meals);
-};
-
+  const getRecipes = async () => {
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
+    );
+    const data = await response.json();
+    setRecipes(data.meals);
+  };
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -78,9 +75,9 @@ const getRecipes = async () => {
   return (
     <div className="APP">
       <form onSubmit={getSearch} className="searchbar">
-        <div className="searchbar-button-container">
+        {/* <div className="searchbar-button-container">
           <Menu />
-        </div>
+        </div> */}
         <input
           className="searchbar-text"
           type="text"
